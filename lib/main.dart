@@ -27,12 +27,12 @@ class _PaymentPageState extends State<PaymentPage> {
   }
 
   Future<void> initBraintreePayment() async {
-    await FlutterBraintree.initialize('YOUR_TOKENIZATION_KEY');
+    await FlutterBraintree.initialize('sandbox_8hw2fynb_5r8rv5ztbjkbvc2j');
   }
 
   Future<void> handleBraintreePayment() async {
     var request = BraintreeDropInRequest(
-      tokenizationKey: 'YOUR_TOKENIZATION_KEY',
+      tokenizationKey: 'sandbox_8hw2fynb_5r8rv5ztbjkbvc2j',
       collectDeviceData: true,
       googlePaymentRequest: BraintreeGooglePaymentRequest(
         totalPrice: '10.00',
